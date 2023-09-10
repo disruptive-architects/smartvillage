@@ -50,3 +50,7 @@ def submit_form(request):
         form = MyForm()
 
     return render(request, 'transportation.html', {'form': form})
+
+
+def services(request):
+    return render(request, 'service.html')

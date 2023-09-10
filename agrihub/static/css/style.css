@@ -91,7 +91,7 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 14px;
   line-height: 26px;
-  color: #636363;
+  color: #dfcece;
   font-weight: 500;
   overflow-x: hidden;
 }
@@ -103,7 +103,7 @@ h5,
 h6 {
   font-family: "Playfair Display", serif;
   font-weight: 700;
-  color: #111111;
+  color: #e7dada;
 }
 /*----------------------------------------*/
 /*  1.2  Section Title */
@@ -168,7 +168,7 @@ h6 {
   position: relative;
 }
 .transparent-header {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(223, 216, 216, 0.6);
   position: absolute;
   top: 0;
   left: 0;
@@ -242,7 +242,7 @@ h6 {
 }
 .contact-info.style-3 ul li {
   font-size: 14px;
-  color: #636363;
+  color: #e7dfdf;
   margin: 0 0 11px 0;
   padding: 0;
 }

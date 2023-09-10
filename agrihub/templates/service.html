@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="row mb-4 container-fluid">
+
+    <div class="col-md-3">
+      <div class="card card-product-grid">
+        <a href="{% url 'weather' %}" class="img-wrap">
+          <img src="{% static 'images/weather.png' %}" />
+        </a>
+        <figcaption class="info-wrap">
+          <a href="{% url 'weather' %}" class="title">See Weather Details</a>
+          <div class="price mt-1">Weather of last 15 days</div>
+          <!-- price-wrap.// -->
+        </figcaption>
+      </div>
+    </div>
+    <!-- col.// -->
+  </div>
+
+{% endblock %}
