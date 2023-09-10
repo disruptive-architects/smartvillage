@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'base.apps.BaseConfig',
+    'chat.apps.ChatConfig',
 ]
+
+AUTH_USER_MODEL = 'chat.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
