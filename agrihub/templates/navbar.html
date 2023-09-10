@@ -34,7 +34,7 @@
       <div class="row align-items-center">
         <div class="col-sm-2">
           <div class="logo">
-            <a href="index.html">EAH</a>
+            <a href="{% url 'home' %}">AGRICULTURE HUB</a>
           </div>
         </div>
         <div class="col-sm-8">
@@ -42,7 +42,7 @@
             <nav>
               <ul>
                 <li>
-                  <a href="index.html">Home</a>
+                  <a href="{% url 'home' %}">Home</a>
                 </li>
                 <li>
                   <a href="#">Pages</a>
@@ -54,8 +54,8 @@
                 <li>
                   <a href="#">Services</a>
                   <ul class="submenu">
-                    <li><a href="">Weather</a></li>
-                    <li><a href="service-2.html">Soil analysis</a></li>
+                    <li><a href="{% url 'weather' %}">Weather</a></li>
+                    <li><a href="{% url 'submit' %}">Transportation</a></li>
                     <li><a href="service-3.html">Crop Managment</a></li>
                   </ul>
                 </li>

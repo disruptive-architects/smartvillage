@@ -1,5 +1,23 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-
+<div class="container mt-5">
+    {% for i in data %}
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            Weather Information
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Enayetpur Sirajganj</h5>
+            <p class="card-text">date: {{i.0}}</p>
+            <p class="card-text">Current Temperature: {{i.1}} degree</p>
+            <p class="card-text">Condition: {{i.2}}</p>
+            <p class="card-text">Humidity: {{i.3}}</p>
+        </div>
+        <div class="card-footer">
+            Last Updated: September 12, 2023, 2:30 PM
+        </div>
+    </div>
+    {% endfor %}
+</div>
 {% endblock content %}
