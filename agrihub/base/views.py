@@ -15,7 +15,15 @@ def weather(request):
     context = requests.get("http://192.168.1.100:3000/get-weather-data").json()
     return render(request, 'weather.html', context)
 
-def submit_form(request):
+def transportation_data(request):
+    response = requests.get("http://192.168.1.100:4000/get-all-journeys").json()
+    context = {"data": response}
+    return render(request, 'transportation-data.html', context)
+
+def transportation_home(request):
+    return render(request, 'transportation-home.html')
+
+def transportation_request(request):
     if request.method == 'POST':
         form = MyForm(request.POST)
         if form.is_valid():
@@ -41,7 +49,7 @@ def submit_form(request):
 
             if response.status_code == 200:
                 # Successful API response, you can handle this as needed
-                return HttpResponse('success_page')
+                return render(request, 'transportation-request.html', {'form': {}})
             else:
                 # Handle API errors or bad responses here
                 # You can add error messages to the form or log errors
@@ -49,7 +57,7 @@ def submit_form(request):
     else:
         form = MyForm()
 
-    return render(request, 'transportation.html', {'form': form})
+    return render(request, 'transportation-request.html', {'form': form})
 
 
 def services(request):
